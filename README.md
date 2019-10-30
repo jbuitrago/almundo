@@ -31,25 +31,26 @@ Se implemento el CRUD de hoteles (solo a nivel API), se crearon los siguientes e
 
 ## Instalación
 
-# Base de datos
+### Base de datos
+
 - Instalar MongoDB Server 4.0
 - Ingresar a la consola MongoDB y crear la base de datos almundo "use almundo"
 - Ingresar a la consola MongoDB y crear la colección hotels "db.createCollection("hotels");"
 - Ejecutar el script script_hotels_mongodb.json para insertar los datos de data.json
-# Backend
+
+### Backend
 
 - cd server
 - npm install
 
-# FrontEnd
+### FrontEnd
 
 - npm install
 
-## Ejecución
-
-La aplicacion se ejecuta con el siguiente comando:
+### Ejecución
 
 - npm run dev
+
 
 
 

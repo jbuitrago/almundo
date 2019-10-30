@@ -1,4 +1,4 @@
-import { HotelService } from "./hotel.service";
+import { HotelService } from "./hotels.service";
 import { TestBed } from "@angular/core/testing";
 
 describe("HotelService", () => {

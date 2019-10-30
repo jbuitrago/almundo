@@ -73,7 +73,7 @@ router.post('/hotels', (req, res, next) => {
 
 /* DELETE a hotel. */
 router.delete('/hotels/:id', (req, res, next) => {
-    db.hotels.remove({_id: mongojs.ObjectId(req.params.id)}, (err, result) => {
+    db.hotels.remove({id: req.params.id}, (err, result) => {
       if (err) return err;
       res.json(result);
     });
@@ -82,15 +82,14 @@ router.delete('/hotels/:id', (req, res, next) => {
 /* PUT a hotel. */
 router.put('/hotels/:id', (req, res, next) => {
   const hotel = req.body;
-  console.log(req);
-  const updateHotel = {};
+  const updateHotel = req.body;
+
   if(!updateHotel.name || !updateHotel.stars || !updateHotel.price){
       res.status(400).json({
-      error: 'Bad data'
+      error: 'Parametros incompletos'
     });
   }else{
-
-    db.hotels.update({_id: mongojs.ObjectId(req.params.id)}, (err, result) => {
+     db.hotels.update({id: req.params.id},updateHotel, (err, result) => {
       if (err) return err;
       res.json(result);
     });
