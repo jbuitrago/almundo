@@ -22,6 +22,7 @@ El frontend se puede visualizar en http://localhost:4200
 ## Extras
 
 Se creo la base de datos almundo en MongoDB para persistir los datos
+
 Se implemento el CRUD de hoteles (solo a nivel API), se crearon los siguientes endpoint, se adjunta el POSTMAN Almundo.postman_collection.json
 
 ## Stack Tecnológico
