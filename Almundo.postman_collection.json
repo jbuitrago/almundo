@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "d52179ec-a159-4842-9aea-6b0eec065d99",
+		"name": "Almundo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST HOTEL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"234567\",\r\n        \"name\": \"Hotel Stefanos 2\",\r\n        \"stars\": 3,\r\n        \"price\": 994.18,\r\n        \"image\": \"4900059_30_b.jpg\",\r\n        \"amenities\": [\r\n            \"safety-box\",\r\n            \"nightclub\",\r\n            \"deep-soaking-bathtub\",\r\n            \"beach\",\r\n            \"business-center\"\r\n        ]\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/hotels/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotels",
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET HOTELS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL HOTEL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/hotels/hotels/234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotels",
+						"hotels",
+						"234567"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE HOTEL",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n       \r\n        \"name\": \"Hotel Stefanos 3\",\r\n        \"stars\": 3,\r\n        \"price\": 994.18\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/hotels/hotels/234567?Content-Type=application/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hotels",
+						"hotels",
+						"234567"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,169 @@
+<app-header></app-header>
+
+
+<div fxLayout="row" fxLayout.xs="column">
+
+    <!-- Normal Screen -->
+    <mat-card fxHide.xs="true" fxShow="true" class="pa-0 h-100 fixed-l" fxFlex="20">
+        <mat-card-title class="bold">Filtros</mat-card-title>
+        <mat-card-content>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                    <mat-panel-title class="title">
+                       <span>
+                           <img width="15px" class="mr-1" src="../../assets/icons/filters/search.svg" alt="search">
+                       </span>
+                        Nombre de hotel
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div fxLayout="row" class="ma-minus">
+                        <mat-form-field class="fix-input">
+                            <input fxFlex="60" matInput placeholder="Ingrese el nombre de hotel" [(ngModel)]='hotelSearch'>
+                        </mat-form-field>
+                        <button class="btn-heigth"fxFlex="30" mat-raised-button color="primary" (click)="searchHotels()">Aceptar</button>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                        <mat-panel-title class="title">
+                           <span>
+                               <img width="15px" class="mr-1" src="../../assets/icons/filters/star.1.svg" alt="search">
+                           </span>
+                            Estrellas
+                        </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div fxLayout="column" class="ma-minus">
+                                <mat-checkbox [(ngModel)]="checkAll" (click)="unCheckAll()">
+                                    Todas las Estrellas
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check5" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check4" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check3" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check2" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check1" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                        </div>
+                </mat-expansion-panel>
+        </mat-card-content>
+    </mat-card>
+
+
+
+<!-- Small Screen -->
+<mat-expansion-panel fxShow.xs="true" fxHide="true" class="pa-0 h-100 fixed" fxFlex="20">
+        <mat-expansion-panel-header class="center-pad">
+                <mat-panel-title class="title">
+                    Filtrar
+                </mat-panel-title>
+        </mat-expansion-panel-header>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                    <mat-panel-title class="title">
+                       <span>
+                           <img width="15px" class="mr-1" src="../../assets/icons/filters/search.svg" alt="search">
+                       </span>
+                        Nombre de hotel
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div fxLayout="row" class="ma-minus">
+                        <mat-form-field class="fix-input">
+                            <input fxFlex="60" matInput placeholder="Ingrese el nombre de hotel" [(ngModel)]='hotelSearch'>
+                        </mat-form-field>&nbsp;
+                        <button class="btn-heigth"fxFlex="30" mat-raised-button color="primary" (click)="searchHotels()">Aceptar</button>
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                        <mat-panel-title class="title">
+                           <span>
+                               <img width="15px" class="mr-1" src="../../assets/icons/filters/star.1.svg" alt="search">
+                           </span>
+                            Estrellas
+                        </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div fxLayout="column" class="ma-minus">
+                                <mat-checkbox [(ngModel)]="checkAll" (click)="unCheckAll()">
+                                    Todas las Estrellas
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check5" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check4" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check3" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check2" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                                <mat-checkbox [(ngModel)]="check1" (click)="checked()">
+                                    <img width="15px" src="../../assets/icons/filters/star.svg" alt="search">
+                                </mat-checkbox>
+                        </div>
+                </mat-expansion-panel>
+    </mat-expansion-panel>
+
+    <div fxFlex="22"></div>
+
+    <div fxFlex="80" class="hotel-list">
+        <mat-card  *ngFor="let hotel of hotels">
+            <div fxLayout="row" fxLayout.xs="column">
+                <img class="media-grid compact bg-cover" [src]="lookImage(hotel.image)" (error)="img.src = errorImg" alt="Hotel-Image" #img>
+                <div class="pa-1" fxFlex>
+                    <div fxLayout="column" fxLayoutGap="10px">
+                        <div>
+                            <p class="ma-0 title">{{ hotel.name }}</p>
+                        </div>
+                        <span>
+                            <img width="25px" height="25px" *ngFor="let star of totalStars(hotel.stars)" src="../../assets/icons/filters/star.svg">
+                        </span>
+                        <span>
+                            <span *ngFor="let amenity of hotel.amenities">
+                                <img width="25px" height="25px" class="ma-1" [src]="lookIcon(amenity)">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="divition"></div>
+                <div class="pa-1">
+                        <div fxLayout="column" class="details">
+                            <h5 class="text-center text-opac">Precio por noche por habitacion</h5>
+
+                            <h2 class="text-center darkorange">ARS <span class="price">{{hotel.price}}</span></h2>
+                            <button mat-raised-button color="primary">Ver Hotel</button>
+                        </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
