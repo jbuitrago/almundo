@@ -1,4 +1,4 @@
-# Almundo Examen Frontend
+# Examen Frontend
 El exámen está compuesto por dos aplicaciones, un backend escrito en NodeJS el cual expondrá
 una API REST para la interacción con la aplicación frontend.
 Adjunto a este documento encontrarás recursos que facilitarán el exámen, para que te enfoques
